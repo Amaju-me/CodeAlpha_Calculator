@@ -51,7 +51,7 @@ buttons.forEach(btn => {
         btn.style = "transform: scale(0.97)";
 
         setTimeout( () => {
-            btn.style = "filter: drop-shadow(7px 6px 0 rgb(48,48,48))";
+            btn.style = "filter: drop-shadow(7px 6px 0 rgb(45,45,45))";
         }, 115);
 
         if (btn.id == "Backspace") {

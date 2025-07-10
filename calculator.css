@@ -1,0 +1,224 @@
+body {
+    height: 96.5vh;
+    width: 99vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 2px;
+    background-color: whitesmoke;
+}
+
+#header {
+    display: flex;
+    height: 5.45%;  /* ~ 5.4vh ~ 2rem */
+    width: 100.68%; /* 100.3% */
+    background-color: cadetblue;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filter-hd {
+    height: 6.75%; /* ~ 2.5rem ~ 6.75vh */
+    width: 100.68%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white; */
+}
+.keyboard-filter {
+    background-color: rgb(157, 237, 243);
+    height: 2rem;
+    width: 1.35rem;
+    padding: 0 7px;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    border: 1.5px groove darkgrey;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.keyboard {
+    height: 93.1%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2rem repeat(5, 1fr);
+    background-color: rgb(179, 198, 234);
+    border: 2px solid gray;
+    cursor: context-menu;
+}
+.keyHd {
+    height: 2rem;
+    grid-column: 1/span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+    border-bottom: 2px solid gray;
+}
+.default {
+    height: 60%;
+    width: 99.67%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 2rem repeat(4, 1fr);
+    position: absolute;
+    bottom: 3px;
+    border: none;
+}
+.df-kHd {
+    grid-column: 1/span 5;
+}
+.left {
+    display: none;
+    position: absolute;
+    top: 2.22rem;
+    z-index: 5;
+}
+.right {
+    display: none;
+    position: absolute;
+    top: 2.22rem;
+    right: 0.13rem;
+}
+.alternate-df {
+    display: none;
+    height: 63.2%;
+    width: 99.67%;
+    position: absolute;
+    bottom: 3.5px;
+    align-self: center;
+    border: none;
+}
+
+.cross {
+    display: flex;
+    height: 100%;
+    width: 3rem;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+}
+.cross:hover {
+    background-color: rgb(172, 59, 59);
+}
+
+.button {
+    font-family: cursive;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(179, 198, 234);
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin: 10px 8px 8px 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+/* .parenthesis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+.button:hover {
+    background-color: rgb(151, 179, 232);
+}
+.equal {
+    background-color: dimgray;
+}
+.equal:hover {
+    background-color: rgb(65, 65, 65);
+}
+.clear {
+    background-color: tomato;
+}
+.clear:hover {
+    background-color: rgb(227, 71, 43);
+}
+
+#display-screen {
+    height: 28.5%;
+    width: 100.68%;
+    justify-items: center;
+    align-content: center;
+    background-color: rgb(59, 59, 59);
+}
+#display {
+    height: 72%;
+    width: 97%;
+    align-content: end;
+    text-align: end;
+    font-family: cursive;
+    font-size: 2.8rem;
+    letter-spacing: 0;
+    background-color:wheat;
+    border: 10px groove dimgray;
+    cursor: context-menu;
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    white-space: pre-wrap;
+    /* scrollbar-color: wheat transparent; */
+    scrollbar-width: none;
+}
+#display:empty::before {
+    content: attr(data-placeholder);
+    color: #888;
+}
+
+@media (max-width: 890px) {
+    #display {
+        width: 95%;
+    }    
+}
+@media (max-width: 800px) {
+    #filter-hd {
+        display: none;
+    }
+    #display-screen {
+        height: 29.68%;
+        margin-top: 1px;
+    }
+    #display {
+        height: 76%;
+    }
+    .default {
+        height: 65%;
+    }
+}
+@media (max-width: 550px) {
+    #display {
+        width: 90%;
+    }
+}
+@media (max-width: 400px) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 360px) {
+    .default {
+        display: none;
+    }
+    .alternate-df {
+        display: inline-grid;
+        height: 66.68%;
+    }
+    #display-screen {
+        height: 28%;
+    }
+    #display {
+        height: 74%;
+    }
+}
+@media (max-width: 298px) {
+    .button {
+        font-size: 1.2rem;
+    }    
+}
+@media (max-width: 250px) {
+    .button {
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+}

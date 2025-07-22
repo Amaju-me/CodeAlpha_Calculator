@@ -1,2 +1,2 @@
 # Custom UI Calculator
-It's a powerful Custom UI Calculator ( with physical Keyboard support ) , built with HTML, CSS & JavaScript...
+HTML, CSS & JavaScript and with physical Keyboard support
